@@ -16,7 +16,7 @@ function ProductComponent() {
       console.log("Fetching fruits...");
       try {
         const response = await fetch(
-          "https://fruitshop2-predic8.zurewebsites.net/shop/v2/products?start=1&limit=10&sort=id&order=asc"
+          "https://fruitshop2-predic8.azurewebsites.net/shop/v2/products?start=1&limit=10&sort=id&order=asc"
         );
         const data = await response.json();
         console.log("Este es data.products", data.products);
