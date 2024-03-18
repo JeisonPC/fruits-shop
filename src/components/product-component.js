@@ -52,7 +52,7 @@ function ProductComponent() {
   return (
     <div className="flex flex-wrap justify-center">
       {fruits
-        ? fruits.map((fruit) => (
+        && fruits.map((fruit) => (
             <motion.div
               className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-4"
               key={fruit.id}
@@ -82,7 +82,8 @@ function ProductComponent() {
               </motion.div>
             </motion.div>
           ))
-        : errorFruits && <p>Error al cargar las frutas: {errorFruits}</p>}
+        }
+        {errorFruits && <p>Error 500 del Servidor de las api</p>}
 
       <AnimatePresence>
         {selectedId ? (
